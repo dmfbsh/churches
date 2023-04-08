@@ -1,6 +1,6 @@
 @ECHO OFF
 
-CD C:\Users\David\Documents\Dropbox\Notebooks\Notebook\3. Churches\GitHub
+CD C:\Users\David\Documents\Google Drive\Notebook\3. Churches\GitHub\churches
 
 jekyll build --verbose --config _config.yml
 
