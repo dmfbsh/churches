@@ -1,10 +1,10 @@
 @ECHO OFF
 
-CD C:\Users\David\Documents\Google Drive\Notebook\3. Churches\GitHub\churches\_ruby
+CD C:\Users\David\Documents\OneDrive\Documents\My Documents\GitHub\churches\_ruby
 
 ruby generate_notebook.rb
 
-CD C:\Users\David\Documents\Google Drive\Notebook\3. Churches\GitHub\churches
+CD C:\Users\David\Documents\OneDrive\Documents\My Documents\GitHub\churches
 
 jekyll build --verbose --config _config.yml
 
