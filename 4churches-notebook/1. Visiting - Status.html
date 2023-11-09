@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<link href="http://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>1. Visiting - Chart.html &middot; Churches Notebook</title>
+<link rel="stylesheet" href="public/css/poole.css">
+<link rel="stylesheet" href="public/css/syntax.css">
+<link rel="stylesheet" href="public/css/lanyon.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<script src="public/js/jquery-3.6.0.min.js"></script>
+<script src="public/js/popper-1.16.1.min.js"></script>
+<script type="text/javascript" src="pie/bootstrap.min.js"></script>
+<script type="text/javascript" src="pie/d3.min.js"></script>
+<script type="text/javascript" src="pie/psd3.js"></script>
+<link rel="stylesheet" type="text/css" href="pie/psd3.css" />
+</head>
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A notebook to aid the understanding of and help with the appreciation of history, design and features when visiting the churches in Shropshire</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item" href="index.html">Home</a>
+    <a class="sidebar-nav-item" href="1.%20Visiting.html">1. Visiting</a>
+    <a class="sidebar-nav-item" href="1.%20Visiting - Status.html">1. Visiting - Status (List)</a>
+    <a class="sidebar-nav-item" href="1.%20Visiting - Chart.html">1. Visiting - Status (Chart)</a>
+    <a class="sidebar-nav-item" href="2.%20Architectural%20Styles.html">2. Architectural Styles</a>
+    <a class="sidebar-nav-item" href="3.%20Architectural%20Structure.html">3. Architectural Structure</a>
+    <a class="sidebar-nav-item" href="4.%20Internal%20Features.html">4. Internal Features</a>
+    <a class="sidebar-nav-item" href="5.%20External%20Features.html">5. External Features</a>
+    <a class="sidebar-nav-item" href="6.%20Organisation.html">6. Organisation</a>
+    <a class="sidebar-nav-item" href="7.%20History.html">7. History</a>
+    <a class="sidebar-nav-item" href="8.%20Special.html">8. Special</a>
+    <a class="sidebar-nav-item" href="about.html">About</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2023. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://dmfbsh.github.io/3churches-notebook/" title="Home">Churches Notebook</a>
+            <small>Reference material for understaing Shropshire's Churches</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page"><div class="container">
+<h1>Visiting Shropshire's Churches</h1>
+<p>The plan is to visit all (Church of England) churches in Shropshire that were built prior to the end of the Victorian era.</p>
+<p>A total of 317 sites to visit have been identified.</p>
+<h3>Background</h3>
+<p>In 1912 the Rev D H S Cranage published the book: <i>An Architectural Account of the Churches of Shropshire</i>, in this book 311 churches in Shropshire are described.</p>
+<p>In 2004 (and 2013 with colour photos) John Leonard published the book: <i>The Churches of Shropshire & their treasures</i>, in this later book 322 strictly Anglican churches in Shropshire are described.  Of these churches, 11 have been excluded as they either are now private dwellings, or were built post the Victorian era.</p>
+<p>In addition, 4 Abbeys (Shrewsbury, Haughmond, Buildwas and Lilleshall) and 2 Priorys (Wenlock and White Ladies) have been added to the list.</p>
+<p>The churches and whether they have been visited or not are listed in the table below.</p>
+<p>The location of each church is also shown on a <a href="#churchmap">Google Map</a> below.</p>
+<h3>Churches</h3>
+<p>Type something in the input field to search the table for Churches:</p>
+<input class="form-control" id="myInput" type="text" placeholder="Search...">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th colspan="2">Visited: interior and exterior photographed (159), no interior photographs taken (4), not seen interior and not planned to revisit (22)</th>
+<th colspan="2">Planned to Visit (33)</th>
+<th>To Visit Sometime (73)</th>
+</tr>
+<tr>
+<th>Complete (185)</th>
+<th>Need to Revisit (26) - See note 1</th>
+<th>Priority (19)</th>
+<th>Other (14)</th>
+<th></th>
+</thead>
+<tbody id="myTable">
+</tr>
+
+<tr>
+<td><p class="fr">Acton Burnell - St Mary</p></td>
+<td><p class="fr">Berrington - All Saints</p></td>
+<td><p class="fr">Aston Botterell - St Michael</p></td>
+<td><p class="fr">Acton Round - St Mary</p></td>
+<td><p class="fr">Abdon - St Margaret</p></td>
+</tr>
+<tr>
+<td><p class="fr">Acton Scott - St Margaret</p></td>
+<td><p class="fr">Bicton - Holy Trinity</p></td>
+<td><p class="fr">Chetton - St Giles</p></td>
+<td><p class="fr">Bettws-y-Crwyn - St Mary</p></td>
+<td><p class="fr">Albrighton (nr Shifnal) - St Mary Magdalene</p></td>
+</tr>
+<tr>
+<td><p class="fr">Adderley - St Peter</p></td>
+<td><p class="fr">Bridgnorth - St Leonard</p></td>
+<td><p class="fr">Chetwynd - St Michael and All Angels</p></td>
+<td><p class="fr">Bucknell - St Mary</p></td>
+<td><p class="fr">Albrighton (nr Shrewsbury) - St John the Baptist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Alberbury - St Michael</p></td>
+<td><p class="fr">Crudgington - St Mary</p></td>
+<td><p class="fr">Clun - St George</p></td>
+<td><p class="fr">Clunbury - St Swithin</p></td>
+<td><p class="fr">Annscroft - Christ Church</p></td>
+</tr>
+<tr>
+<td><p class="fr">All Stretton - St Michael</p></td>
+<td><p class="fr">Dawley - Holy Trinity</p></td>
+<td><p class="fr">Ditton Priors - St John the Baptist</p></td>
+<td><p class="fr">Dudleston - St Mary</p></td>
+<td><p class="fr">Ash - Christ Church</p></td>
+</tr>
+<tr>
+<td><p class="fr">Alveley - St Mary the Virgin</p></td>
+<td><p class="fr">Glazeley - St Bartholomew</p></td>
+<td><p class="fr">Doddington - St John the Baptist</p></td>
+<td><p class="fr">Halston - Chapel</p></td>
+<td><p class="fr">Bedstone - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Ashford Bowdler - St Andrew</p></td>
+<td><p class="fr">Ketley - St Mary the Virgin</p></td>
+<td><p class="fr">Highley - St Mary</p></td>
+<td><p class="fr">Haughton - St Chad</p></td>
+<td><p class="fr">Boningale - St Chad</p></td>
+</tr>
+<tr>
+<td><p class="fr">Ashford Carbonell - St Mary</p></td>
+<td><p class="fr">Leaton - Holy Trinity</p></td>
+<td><p class="fr">Llanymynech - St Agatha</p></td>
+<td><p class="fr">Hopesay - St Mary</p></td>
+<td><p class="fr">Boraston - no known dedication</p></td>
+</tr>
+<tr>
+<td><p class="fr">Astley - St Mary</p></td>
+<td><p class="fr">Lee Brockhurst - St Peter</p></td>
+<td><p class="fr">Moreton Say - St Margaret</p></td>
+<td><p class="fr">Hordley - St Mary</p></td>
+<td><p class="fr">Broadstone - Chapel</p></td>
+</tr>
+<tr>
+<td><p class="fr">Astley Abbots - St Calixtus</p></td>
+<td><p class="fr">Madeley - St Michael</p></td>
+<td><p class="fr">Neen Savage - St Mary</p></td>
+<td><p class="fr">Kinlet - St John the Baptist</p></td>
+<td><p class="fr">Broughton - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Aston Eyre - no known dedication</p></td>
+<td><p class="fr">Market Drayton - St Mary</p></td>
+<td><p class="fr">Neen Sollars - All Saints</p></td>
+<td><p class="fr">Lydbury North - St Michael and All Angels</p></td>
+<td><p class="fr">Calverhall - Holy Trinity</p></td>
+</tr>
+<tr>
+<td><p class="fr">Atcham - St Eata</p></td>
+<td><p class="fr">Meole Brace - Holy Trinity</p></td>
+<td><p class="fr">Oldbury - St Nicholas</p></td>
+<td><p class="fr">Rushbury - St Peter</p></td>
+<td><p class="fr">Chapel Lawn - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Badger - St Giles</p></td>
+<td><p class="fr">Oswestry - Holy Trinity</p></td>
+<td><p class="fr">Welsh Frankton - St Andrew</p></td>
+<td><p class="fr">Sidbury - Holy Trinity</p></td>
+<td><p class="fr">Cleehill - St Peter</p></td>
+</tr>
+<tr>
+<td><p class="fr">Barrow - St Giles</p></td>
+<td><p class="fr">Priorslee - St Peter</p></td>
+<td><p class="fr">Willey - St John the Baptist</p></td>
+<td><p class="fr">St Martins - St Martin</p></td>
+<td><p class="fr">Cleeton St Mary - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Baschurch - All Saints</p></td>
+<td><p class="fr">Selattyn - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Stottesdon - St Mary</p></td>
+<td><p class="fr">Cleobury North - St Peter and St Paul</p></td>
+</tr>
+<tr>
+<td><p class="fr">Batchcott Richards Castle - All Saints</p></td>
+<td><p class="fr">Sheinton - St Peter and St Paul</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Uppington - Holy Trinity</p></td>
+<td><p class="fr">Clunton - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Battlefield - St Mary Magdalene</p></td>
+<td><p class="fr">Shrewsbury - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">West Felton - St Michael</p></td>
+<td><p class="fr">Coreley - St Peter</p></td>
+</tr>
+<tr>
+<td><p class="fr">Beckbury - St Milburga</p></td>
+<td><p class="fr">Shrewsbury - St Julian</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Whitton - St Mary</p></td>
+<td><p class="fr">Criftins (Dudleston Heath) - St Matthew</p></td>
+</tr>
+<tr>
+<td><p class="fr">Benthall - St Bartholomew</p></td>
+<td><p class="fr">Stockton - St Chad</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Woolstaston - St Michael</p></td>
+<td><p class="fr">Cwm Head - St Michael</p></td>
+</tr>
+<tr>
+<td><p class="fr">Betton Strange - St Margaret</p></td>
+<td><p class="fr">Stoke on Tern - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Donington - St Cuthbert</p></td>
+</tr>
+<tr>
+<td><p class="fr">Billingsley - St Mary</p></td>
+<td><p class="fr">Upton Cressett - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Donnington Wood - St Matthew</p></td>
+</tr>
+<tr>
+<td><p class="fr">Bishops Castle - St John the Baptist</p></td>
+<td><p class="fr">Welshampton - St Michael and All Angels</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Edgton - St Michael</p></td>
+</tr>
+<tr>
+<td><p class="fr">Bitterley - St Mary</p></td>
+<td><p class="fr">Wentnor - St Michael and All Angels</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Farlow - St Giles</p></td>
+</tr>
+<tr>
+<td><p class="fr">Bourton - Holy Trinity</p></td>
+<td><p class="fr">Westbury - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Fauls - Holy Immanuel</p></td>
+</tr>
+<tr>
+<td><p class="fr">Bridgnorth - St Mary Magdalene</p></td>
+<td><p class="fr">Whittington - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Fitz - St Peter and St Paul</p></td>
+</tr>
+<tr>
+<td><p class="fr">Bromfield - St Mary the Virgin</p></td>
+<td><p class="fr">Wombridge - St Mary and St Leonard</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Gobowen - All Saints</p></td>
+</tr>
+<tr>
+<td><p class="fr">Broseley - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Greete - St James</p></td>
+</tr>
+<tr>
+<td><p class="fr">Buildwas - Abbey</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Hanwood - St Thomas</p></td>
+</tr>
+<tr>
+<td><p class="fr">Buildwas - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Hinstock - St Oswald</p></td>
+</tr>
+<tr>
+<td><p class="fr">Burford - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Hope - Holy Trinity</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cardeston - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Hopton Castle - St Edward</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cardington - St James</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Hopton Wafers - St Michael</p></td>
+</tr>
+<tr>
+<td><p class="fr">Caynham - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Knockin - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Chelmarsh - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Lea Cross - St Anne</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cheswardine - St Swithin</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Leighton - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Childs Ercall - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Little Berwick - Chapel</p></td>
+</tr>
+<tr>
+<td><p class="fr">Chirbury - St Michael the Archangel</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Little Drayton - Christ Church</p></td>
+</tr>
+<tr>
+<td><p class="fr">Church Aston - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Little Ness - St Martin</p></td>
+</tr>
+<tr>
+<td><p class="fr">Church Preen - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Llanfair Waterdine - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Church Pulverbatch - St Edith</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Loughton - Chapel</p></td>
+</tr>
+<tr>
+<td><p class="fr">Church Stretton - St Laurence</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Lyneal (Colmere) - St John the Evangelist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Claverley - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Maesbrook - St John</p></td>
+</tr>
+<tr>
+<td><p class="fr">Clee St Margaret - St Margaret</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Maesbury - St John the Baptist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cleobury Mortimer - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Mainstone - St John the Baptist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Clive - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Marton - St Mark</p></td>
+</tr>
+<tr>
+<td><p class="fr">Clungunford - St Cuthbert</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Middleton - Chapel</p></td>
+</tr>
+<tr>
+<td><p class="fr">Coalbrookdale - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Middleton Scriven - St John the Baptist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cockshutt - St Simon and St Jude</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Middleton-in-Chirbury - Holy Trinity</p></td>
+</tr>
+<tr>
+<td><p class="fr">Condover - St Andrew and St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Morton - St Philip and St James</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cound - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Nash - St John the Baptist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Cressage - Christ Church</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Neenton - All Saints</p></td>
+</tr>
+<tr>
+<td><p class="fr">Culmington - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Newcastle on Clun - St John the Evangelist</p></td>
+</tr>
+<tr>
+<td><p class="fr">Diddlebury - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Pradoe - no known dedication</p></td>
+</tr>
+<tr>
+<td><p class="fr">Dorrington - St Edward</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Quatt - St Andrew</p></td>
+</tr>
+<tr>
+<td><p class="fr">Easthope - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Rowton - All Hallows</p></td>
+</tr>
+<tr>
+<td><p class="fr">Eaton Constantine - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Sambrook - St Luke</p></td>
+</tr>
+<tr>
+<td><p class="fr">Eaton-under-Heywood - St Edith</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Shelton and Oxon - Christ Church</p></td>
+</tr>
+<tr>
+<td><p class="fr">Edgmond - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Sheriffhales - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Edstaston - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Shrawardine - St Mary the Virgin</p></td>
+</tr>
+<tr>
+<td><p class="fr">Ellesmere - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Shrewsbury - St John</p></td>
+</tr>
+<tr>
+<td><p class="fr">Eyton-upon-the-Weald Moors - St Catherine</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Sibdon Carwood - St Michael</p></td>
+</tr>
+<tr>
+<td><p class="fr">Ford - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Silvington - St Michael</p></td>
+</tr>
+<tr>
+<td><p class="fr">Frodesley - St Mark</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Stowe - St Michael</p></td>
+</tr>
+<tr>
+<td><p class="fr">Great Bolas - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Trefonen - All Saints</p></td>
+</tr>
+<tr>
+<td><p class="fr">Great Ness - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Tuckhill - Holy Innocents</p></td>
+</tr>
+<tr>
+<td><p class="fr">Great Wollaston - St John</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Westin Rhyn - St John the Divine</p></td>
+</tr>
+<tr>
+<td><p class="fr">Grinshill - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Weston Lullingfields - Holy Trinity</p></td>
+</tr>
+<tr>
+<td><p class="fr">Habberley - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Wheathill - Holy Trinity</p></td>
+</tr>
+<tr>
+<td><p class="fr">Hadley - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">White Ladies - Priory</p></td>
+</tr>
+<tr>
+<td><p class="fr">Hadnall - St Mary Magdalene</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Whixall - St Mary</p></td>
+</tr>
+<tr>
+<td><p class="fr">Halford - St Thomas</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Woodcote - Chapel</p></td>
+</tr>
+<tr>
+<td><p class="fr">Harley - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Woore - St Leonard</p></td>
+</tr>
+<tr>
+<td><p class="fr">Haughmond - Abbey</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr">Wrockwardine Wood - Holy Trinity</p></td>
+</tr>
+<tr>
+<td><p class="fr">Heath - Chapel</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">High Ercall - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Hodnet - St Luke</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Holdgate - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Hope Bagot - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Hope Bowdler - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Hughley - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ightfield - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ironbridge - St Luke</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Jackfield - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Kemberton - St Andrew and St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Kenley - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Kinnerley - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Knowbury - St Paul</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Kynnersley - St Chad</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Langley - Chapel</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Lawley - St John the Evangelist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Leebotwood - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Lilleshall - Abbey</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Lilleshall - St Michael and All Angels</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Linley - St Leonard</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Little Stretton - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Little Wenlock - St Lawrence</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Llanyblodwel - St Michael the Archangel</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Longden - St Ruthen</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Longdon on Tern - St Bartholomew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Longford - Talbot Chapel</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Longnor - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Loppington - St Michael and All Angels</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ludford - St Giles</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ludlow - St John</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ludlow - St Laurence</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Lydham - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Malinslee - St Leonard</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Melverley - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Milson - St George</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Minsterley - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Monkhopton - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Montford - St Chad</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">More - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Moreton Corbet - St Bartholomew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Morville - St Gregory</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Much Wenlock - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Much Wenlock - Priory</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Munslow - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Myddle - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Myndtown - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Newport - St Nicholas</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Newtown - King Charles the Martyr</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Norbury - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Norton-in-Hales - St Chad</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Oakengates - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Onibury - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Oswestry - St Oswald</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Peplow - Chapel of the Epiphany</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Petton - St Raphael and St Isidore</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Pitchford - St Michael and All Angels</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Pontesbury - St George</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Prees - St Chad</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Preston Gubbals - St Martin</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Preston-upon-the-Weald Moors - St Lawrence</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Quatford - St Mary Magdalene</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ratlinghope - St Margaret</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Rodington - St George</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ruyton XI Towns - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ryton - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Ryton - St Thomas</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shawbury - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shelve - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shifnal - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shipton - St James</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - Abbey</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - Congregational Church</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St Alkmund</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St Chad (new)</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St Chad (old)</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St George</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St Giles</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St Mary the Virgin</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Shrewsbury - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Smethcott - St Michael and All Angels</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Snailbeach - St Luke</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">St Georges - St George</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stanton Lacy - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stanton Long - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stanton-upon-Hine Heath - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stapleton - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stirchley - St James</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stoke St Milborough - St Milburgh</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Stokesay - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Sutton Maddock - St Mary</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Tasley - St Peter and St Paul</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Tibberton - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Tilstock - Christ Church</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Tong - St Bartholomew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Tugford - St Catherine</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Uffington - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Upton Magna - St Lucy</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Waters Upton - St Michael</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Wellington - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Wellington - Christ Church</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Wem - St Peter and St Paul</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Weston-under-Redcastle - St Luke</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Whitchurch - St Alkmund</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Wistanstow - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Withington - St John the Baptist</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Worfield - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Worthen - All Saints</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Wrockwardine - St Peter</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Wroxeter - St Andrew</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+<tr>
+<td><p class="fr">Yockleton - Holy Trinity</p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+<td><p class="fr"></p></td>
+</tr>
+
+
+</tbody>
+</table>
+<p>Notes:</p>
+<p>1. Churches need to be re-visited for example because they were found to be locked when first visited.</p>
+<p>2. Have been inside this church, but not have any interior photos ({{ site.data.Shropshire_Notebook-Churches_Status.RevisitCount2 }} chruches).</p>
+<p>3. Have visited the outside of this church, but do not have plans to visit the interior currently ({{ site.data.Shropshire_Notebook-Churches_Status.RevisitCount3 }} chruches).</p>
+</div>
+<a id="churchmap"><h3>Map</h3></a>
+<iframe src="https://www.google.co.uk/maps/d/embed?mid=19Q1XEc8jS2PbDt31ZY6mA67bKx2LbbwF" width="640" height="480"></iframe>
+<p>The key to the symbols used on the map is:</p>
+<ul>
+    <li>Grey Tick - Church has been visited (outside and inside)</li>
+    <li>Red Tick - Church has been visited (outside only and e.g. found to be locked)</li>
+    <li>Yellow Tick - Planned to be visited and as a priority</li>
+    <li>Yellow Placemark - Planned to be visited</li>
+    <li>Blue Placemark - Yet to be visited</li>
+</ul>
+<p>How to use the map:</p>
+<ul>
+    <li>Click on the icon in the top left corner to select which churches to show on the map.</li>
+    <li>Click on the icon in the top right corner to open a larger view of the map.</li>
+</ul>
+</div>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='https://dmfbsh.github.io/3churches-notebook/public/js/script.js'></script>
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable .fr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+          $('#myTable tr').show();
+          $('#myTable tr').each(function() {
+            if($(this).find('.fr:visible').length == 0){
+              $(this).hide();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<link href="http://gmpg.org/xfn/11" rel="profile">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>1. Visiting - Chart.html &middot; Churches Notebook</title>
+<link rel="stylesheet" href="public/css/poole.css">
+<link rel="stylesheet" href="public/css/syntax.css">
+<link rel="stylesheet" href="public/css/lanyon.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<script src="public/js/jquery-3.6.0.min.js"></script>
+<script src="public/js/popper-1.16.1.min.js"></script>
+<script type="text/javascript" src="pie/bootstrap.min.js"></script>
+<script type="text/javascript" src="pie/d3.min.js"></script>
+<script type="text/javascript" src="pie/psd3.js"></script>
+<link rel="stylesheet" type="text/css" href="pie/psd3.css" />
+</head>
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A notebook to aid the understanding of and help with the appreciation of history, design and features when visiting the churches in Shropshire</p>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <a class="sidebar-nav-item" href="index.html">Home</a>
+    <a class="sidebar-nav-item" href="1.%20Visiting.html">1. Visiting</a>
+    <a class="sidebar-nav-item" href="1.%20Visiting - Status.html">1. Visiting - Status (List)</a>
+    <a class="sidebar-nav-item" href="1.%20Visiting - Chart.html">1. Visiting - Status (Chart)</a>
+    <a class="sidebar-nav-item" href="2.%20Architectural%20Styles.html">2. Architectural Styles</a>
+    <a class="sidebar-nav-item" href="3.%20Architectural%20Structure.html">3. Architectural Structure</a>
+    <a class="sidebar-nav-item" href="4.%20Internal%20Features.html">4. Internal Features</a>
+    <a class="sidebar-nav-item" href="5.%20External%20Features.html">5. External Features</a>
+    <a class="sidebar-nav-item" href="6.%20Organisation.html">6. Organisation</a>
+    <a class="sidebar-nav-item" href="7.%20History.html">7. History</a>
+    <a class="sidebar-nav-item" href="8.%20Special.html">8. Special</a>
+    <a class="sidebar-nav-item" href="about.html">About</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2023. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://dmfbsh.github.io/3churches-notebook/" title="Home">Churches Notebook</a>
+            <small>Reference material for understaing Shropshire's Churches</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page"><div class="container">
+<h1>Visiting Shropshire's Churches</h1>
+<p>The plan is to visit all (Church of England) churches in Shropshire that were built prior to the end of the Victorian era.</p>
+<p>A total of 317 sites to visit have been identified.</p>
+<h3>Background</h3>
+<p>In 1912 the Rev D H S Cranage published the book: <i>An Architectural Account of the Churches of Shropshire</i>, in this book 311 churches in Shropshire are described.</p>
+<p>In 2004 (and 2013 with colour photos) John Leonard published the book: <i>The Churches of Shropshire & their treasures</i>, in this later book 322 strictly Anglican churches in Shropshire are described.  Of these churches, 11 have been excluded as they either are now private dwellings, or were built post the Victorian era.</p>
+<p>In addition, 4 Abbeys (Shrewsbury, Haughmond, Buildwas and Lilleshall) and 2 Priorys (Wenlock and White Ladies) have been added to the list.</p>
+<p>The number of churches and whether they have been visited or not are shown in the chart below.</p>
+<p>The location of each church is also shown on a <a href="#churchmap">Google Map</a> below.</p>
+<h3>Churches</h3>
+
+<div class="container">
+  <div id="chartContainer" class="well"></div>
+</div>
+
+<script type="text/javascript">
+    var sampleData = [{
+        noOfItems: 211,
+        itemLabel: "Visited",
+        popup: "The number of churches visited is: 211",
+        drilldown: [{
+            noOfItems: 185,
+            itemLabel: "Complete",
+            popup: "The number of churches visited where have also been inside (or have no plans to revisit to see the interior) is: 185",
+            drilldown: [{
+                noOfItems: 159,
+                itemLabel: "Have Photos",
+                popup: "The number of churches where have been inside and have photographs: 159"
+                }, {
+                noOfItems: 26,
+                itemLabel: "Do Not Have Photos",
+                popup: "The number of churches where have been inside but do not have photographs or have no plans to revisit to see the interior: 26",
+                drilldown: [{
+                    noOfItems: 4,
+                    itemLabel: "No Photos",
+                    popup: "The number of churches where have been inside but do not have photographs: 4"
+                    }, {
+                    noOfItems: 22,
+                    itemLabel: "No Revisit",
+                    popup: "The number of churches where have been to and seen the exterior only and have no plans to revisit for the interior: 22"
+                }]
+            }]
+            }, {
+            noOfItems: 26,
+            itemLabel: "Not Complete",
+            popup: "The number of churches visited but have not yet been inside and so want to revisit to see the interior: 26"
+        }]
+        }, {
+        noOfItems: 106,
+        itemLabel: "Not Visited",
+        popup: "The number of churches not yet visited is: 106"
+    }];
+
+    var config = {
+        containerId: "chartContainer",
+        width: 500,
+        height: 500,
+        data: sampleData,
+        heading: {
+            text: "",
+            pos: "top"
+        },
+        label: function(d) {
+            return d.data.itemLabel + ":" + d.data.noOfItems;
+        },
+        value: "noOfItems",
+        inner: "drilldown",
+        tooltip: function(d) {
+            return "<p>" + d.popup + ".</p>";
+        },
+        transition: "bounce",
+        transitionDuration: 1000,
+        donutRadius: 0
+    };
+
+    var samplePie = new psd3.Pie(config);
+</script>
+
+<a id="churchmap"><h3>Map</h3></a>
+<iframe src="https://www.google.co.uk/maps/d/embed?mid=19Q1XEc8jS2PbDt31ZY6mA67bKx2LbbwF" width="640" height="480"></iframe>
+<p>The key to the symbols used on the map is:</p>
+<ul>
+    <li>Grey Tick - Church has been visited (outside and inside)</li>
+    <li>Red Tick - Church has been visited (outside only and e.g. found to be locked)</li>
+    <li>Yellow Tick - Planned to be visited and as a priority</li>
+    <li>Yellow Placemark - Planned to be visited</li>
+    <li>Blue Placemark - Yet to be visited</li>
+</ul>
+<p>How to use the map:</p>
+<ul>
+    <li>Click on the icon in the top left corner to select which churches to show on the map.</li>
+    <li>Click on the icon in the top right corner to open a larger view of the map.</li>
+</ul>
+</div>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='https://dmfbsh.github.io/3churches-notebook/public/js/script.js'></script>
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable .fr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+          $('#myTable tr').show();
+          $('#myTable tr').each(function() {
+            if($(this).find('.fr:visible').length == 0){
+              $(this).hide();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
