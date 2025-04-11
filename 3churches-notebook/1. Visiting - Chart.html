@@ -45,7 +45,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2023. All rights reserved.
+      &copy; 2025. All rights reserved.
     </p>
   </div>
 </div>
@@ -82,17 +82,17 @@
 
 <script type="text/javascript">
     var sampleData = [{
-        noOfItems: 230,
+        noOfItems: 232,
         itemLabel: "Visited",
-        popup: "The number of churches visited is: 230",
+        popup: "The number of churches visited is: 232",
         drilldown: [{
-            noOfItems: 206,
+            noOfItems: 209,
             itemLabel: "Complete",
-            popup: "The number of churches visited where have also been inside (or have no plans to revisit to see the interior) is: 206",
+            popup: "The number of churches visited where have also been inside (or have no plans to revisit to see the interior) is: 209",
             drilldown: [{
-                noOfItems: 180,
+                noOfItems: 183,
                 itemLabel: "Have Photos",
-                popup: "The number of churches where have been inside and have photographs: 180"
+                popup: "The number of churches where have been inside and have photographs: 183"
                 }, {
                 noOfItems: 26,
                 itemLabel: "Do Not Have Photos",
@@ -108,14 +108,14 @@
                 }]
             }]
             }, {
-            noOfItems: 24,
+            noOfItems: 23,
             itemLabel: "Not Complete",
-            popup: "The number of churches visited but have not yet been inside and so want to revisit to see the interior: 24"
+            popup: "The number of churches visited but have not yet been inside and so want to revisit to see the interior: 23"
         }]
         }, {
-        noOfItems: 87,
+        noOfItems: 84,
         itemLabel: "Not Visited",
-        popup: "The number of churches not yet visited is: 87"
+        popup: "The number of churches not yet visited is: 84"
     }];
 
     var config = {
@@ -166,22 +166,7 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-    <script src='https://dmfbsh.github.io/3churches-notebook/public/js/script.js'></script>
-    <script>
-      $(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $("#myTable .fr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-          $('#myTable tr').show();
-          $('#myTable tr').each(function() {
-            if($(this).find('.fr:visible').length == 0){
-              $(this).hide();
-            }
-          });
-        });
-      });
-    </script>
+    <script src='public/js/script.js'></script>
+    <script src='public/js/myfilter.js'></script>
   </body>
 </html>
